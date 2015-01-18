@@ -126,9 +126,24 @@ function applause() {
     }
 
     audio.play();
+    showWin();
 }
 function countMovements() {
     count = count + 1;
     var counter = document.getElementById("counter");
     counter.innerHTML = count;
+}
+
+
+function scheduleBanner() {
+  window.setTimeout(function() {
+    document.getElementById("you-win").hidden = true;
+  }, 4000);
+}
+
+// Display the banner
+
+function showWin() {
+  document.getElementById("you-win").hidden = false;
+  scheduleBanner();
 }
