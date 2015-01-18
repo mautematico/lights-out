@@ -115,15 +115,15 @@ function applause() {
 
     var audio = new Audio();
 
-    if (audio.canPlayType("audio/mp3")) {
-        audio.src = "/games/html5/applause.mp3";
+    if (audio.canPlayType("audio/ogg")) {
+        audio.src = "/sounds/162473__kastenfrosch__successful.ogg";
     }
-    else if (audio.canPlayType("audio/wav")) {
-        audio.src = "/games/html5/applause.wav";
+//    else if (audio.canPlayType("audio/wav")) {
+//        audio.src = "/games/html5/applause.wav";
+//    }
+    else if (audio.canPlayType("audio/mp3")) {
+            audio.src = "/sounds162473__kastenfrosch__successful.mp3";
     }
-   else if (audio.canPlayType("audio/ogg")) {
-            audio.src = "applause.mp3";
-         }
 
     audio.play();
 }
