@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <title>Lights out</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            border-color: Navy;
+            border-spacing: 0px;
+            border-style: solid;
+            border-width: thin;
+            cursor: pointer;
+        }
+        button {
+            width: 50px;
+            cursor: pointer;
+        }
+        #square div {
+            font-size: 0;
+        }
+    </style>
+
+
+    <script src="kodyazlightsout.js" defer></script>
+</head>
+
+<body onload="resizeBoard(3);">
+
+    Nivel:
+    <button onclick="javascript:resizeBoard(3);">3x3</button>
+    <button onclick="javascript:resizeBoard(5);">5x5</button>
+    Tiempo: <span id="timer"></span>
+    <br /> Movimientos: <span id="counter"></span>
+    <br />
+
+
+    <div id="square" class="board"></div>
+
+</body>
+
+</html>
